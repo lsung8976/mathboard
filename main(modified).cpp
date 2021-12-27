@@ -165,15 +165,6 @@ for(n=1; n<=nstep; ++n){
 
             // K_Ux = - U (DEL . Ux) - (1/p) * (DELx . P)  + B (DELx . B) * (1/(mu * rho) + B(DEL . Bx) * (1/(mu * rho)) + (nu/rho) * (DEL)^2 . Ux
 
-
-
-            /*
-			k_ux[i][j][k]=-0.5*ux[i][j][k]*(ux[i+1][j][k]-ux[i-1][j][k])/dx-0.5*uy[i][j][k]*(ux[i][j+1][k]-ux[i][j-1][k])/dy-0.5*uz[i][j][k]*(ux[i][j][k+1]-ux[i][j][k-1])/dz
-			-0.5*(p[i+1][j][k]-p[i-1][j][k])/(dx*rho[i][j][k])
-			+0.5*(bx[i][j][k]*(bx[i+1][j][k]-bx[i-1][j][k])/dx+by[i][j][k]*(by[i+1][j][k]-by[i-1][j][k])/dy+bz[i][j][k]*(bz[i+1][j][k]-bz[i-1][j][k])/dz)/(mu*rho[i][j][k])
-			+0.5*(bx[i][j][k]*(bx[i+1][j][k]-bx[i-1][j][k])/dx+by[i][j][k]*(bx[i][j+1][k]-bx[i][j-1][k])/dy+bz[i][j][k]*(bx[i][j][k+1]-bx[i][j][k-1])/dz)/(mu*rho[i][j][k])
-			+nu*((ux[i+1][j][k]+ux[i-1][j][k]-2.0*ux[i][j][k])/(dx*dx)+(ux[i][j+1][k]+ux[i][j-1][k]-2.0*ux[i][j][k])/(dy*dy)+(ux[i][j][k+1]+ux[i][j][k-1]-2.0*ux[i][j][k])/(dz*dz))/(rho[i][j][k]);
-			*/
 			}
 		}
 	}

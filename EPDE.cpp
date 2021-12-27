@@ -1,6 +1,12 @@
 //Elliptic Partial Differential Equations(타원형 편미분방정식)
 //SOR 방법 사용
 
+
+/*
+
+    U
+*/
+
 #include <stdio.h>
 #include <math.h>
 
@@ -20,9 +26,9 @@ int main() {
     printf("Write the section No. for x & y direction : ");
     scanf("%d%d", &sect_x, &sect_y);
     printf("Input positions(x, y) for boundary condition : ");
-    scanf("%lf%lf%lf%lf", &x_0, &y_0, &x_n, &y_n);
+    scanf("%lf%lf%lf%lf", &x_0, &y_0, &x_n, &y_n);          //격자 범위 입력
     printf("Input function value at every position : ");
-    scanf("%lf%lf%lf%lf", &bound_a, &bound_b, &bound_c, &bound_d);
+    scanf("%lf%lf%lf%lf", &bound_a, &bound_b, &bound_c, &bound_d);  //경계조건 입력
 
     fxy = 0.0;
     rel_coeff = 1.3333333;
@@ -43,7 +49,6 @@ int main() {
         U[i][sect_y] = bound_d;
         for(j = 1; j < sect_y; j++){   
             U[i][j] = 0.0;
-
         }
     }
 
